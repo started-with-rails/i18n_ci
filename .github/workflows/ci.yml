@@ -32,8 +32,6 @@ jobs:
           ruby-version: 3.0.x
           bundler-cache: true
       - uses: comchangs/action-yarn@v0.1-beta
-        with:
-          cmd: install
       - name: Build and run tests
         env:
           DATABASE_URL: postgres://postgres:@localhost:5432/i18n_ci_test
