@@ -55,8 +55,8 @@ jobs:
           bundle exec rails db:prepare
           bundle exec rails spec
       - name: Upload coverage results    
-      uses: actions/upload-artifact@master
-      if: always()
-      with:
-        name: coverage-report
-        path: coverage
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: coverage-report
+          path: coverage
