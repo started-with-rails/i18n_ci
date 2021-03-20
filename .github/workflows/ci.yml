@@ -10,8 +10,8 @@ jobs:
       with:
         ruby-version: 3.0.x
     - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
+      with:
+        cmd: install
     - name: Install Rubocop
       run: gem install rubocop
     - name: Check code
