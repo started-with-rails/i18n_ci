@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t '.posts_heading', count: @posts.size%></h1>
+<!-- <h1><%= t(:new_post, scope: [:global,:posts]) %></h1> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th><%=t('activerecord.attributes.post.title')%></th>
+      <th><%=t('activerecord.attributes.post.description')%></th>
+      <th><%=t('activerecord.attributes.post.status')%></th>
+      <th><%=t('activerecord.attributes.post.created_at')%></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.description %></td>
+        <td><%= post.status %></td>
+        <td <%= tag.time l(post.created_at, format: :long), datetime: post.created_at %><br></td>
+        <td><%= link_to t('global.posts.view_post'), post, class: "btn btn-info" %></td>
+        <td><%= link_to t('global.posts.edit_post'), edit_post_path(post), class: "btn btn-warning" %></td>
+        <td><%= link_to t('global.posts.delete_post'), post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('global.posts.new_post'), new_post_path, class: "btn btn-primary" %>

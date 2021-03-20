@@ -1,0 +1,31 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t 'global.posts.messages.errors', count: post.errors.count %></h2>
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description,class: 'form-control' %>
+  </div>
+
+   <div class="form-group form-check">
+    <%= form.label :status, class: "form-check-label" %>
+    <%= form.check_box :status, class: "form-check-input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>

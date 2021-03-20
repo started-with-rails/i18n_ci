@@ -1,0 +1,25 @@
+te:
+  global:
+    back: 'తిరిగి వెళ్ళు'
+    posts:
+      new_post: 'క్రొత్త పోస్ట్‌ను సృష్టించండి'
+      delete_post: 'పోస్ట్‌ను తొలగించండి'
+      edit_post: 'పోస్ట్‌ను సవరించండి'
+      view_post: 'పోస్ట్ చూడండి'
+      messages:
+        errors:
+          one: "ఒక లోపం ఈ పోస్ట్ సేవ్ చేయకుండా నిషేధించబడింది"
+          other: "%{count} లోపాలు ఈ పోస్ట్‌ను సేవ్ చేయకుండా నిషేధించాయి"
+  posts:
+    index:
+      hello: "హలో ప్రపంచం"
+      posts_heading: "తాజా %{count} పోస్ట్‌లను ప్రదర్శిస్తోంది"
+  activerecord:
+    models:
+      post: "పోస్ట్"
+    attributes:
+      post:
+        title: "పోస్ట్ శీర్షిక"
+        description: "పోస్ట్ కంటెంట్‌"    
+        status: "స్థితి"
+        created_at: 'సృష్టించిన తేదీ మరియు సమయం'

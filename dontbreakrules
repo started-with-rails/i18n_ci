@@ -1,0 +1,5 @@
+https://docs.rubocop.org/rubocop/usage/basic_usage.html
+rubocop --auto-correct-all
+rubocop --a
+rubocop --lint
+rubocop --fix-layout
